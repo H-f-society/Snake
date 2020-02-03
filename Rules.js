@@ -2,10 +2,10 @@
 * @Author: root
 * @Date:   2020-01-30 23:30:09
 * @Last Modified by:   root
-* @Last Modified time: 2020-02-03 19:02:04
+* @Last Modified time: 2020-02-04 01:55:44
 */
 var GameConfig = function() {
-	this.MapSize   = 50;
+	this.MapSize   = 100;
 	this.MoveDires = [1, 0];
 }
 GameConfig.prototype.updateMoveDires = function(x, y) {
@@ -127,11 +127,15 @@ var config = new GameConfig();
 var snake  = new Snake();
 var draw   = new Draw(ctx);
 
+canvas.width = config.MapSize * 10;
+canvas.height = config.MapSize * 10;
+
 draw.drawMap(config.MapSize);
 snake.InitSnakeBody();
 snake.InitGameMap(config.MapSize);
 snake.InitSnake();
 snake.createFood();
+
 
 
 document.onkeydown = function(event) {
