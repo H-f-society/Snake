@@ -5,7 +5,7 @@
 * @Last Modified time: 2020-02-04 01:55:44
 */
 var GameConfig = function() {
-	this.MapSize   = 100;
+	this.MapSize   = 60;
 	this.MoveDires = [1, 0];
 }
 GameConfig.prototype.updateMoveDires = function(x, y) {
