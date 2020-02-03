@@ -143,9 +143,9 @@ document.onkeydown = function(event) {
 }
 setInterval("selfMove()", 50);
 function selfMove() {
-	snake.MoveSnake(snake.GameMap, BFSPath(snake.GameMap, snake.Body[0], snake.Food));
+	snake.MoveSnake(snake.GameMap, NextPath(snake.GameMap, snake.Body[0], snake.Food));
 }
-function BFSPath(map, snakePS, foodPS) {
+function NextPath(map, snakePS, foodPS) {
 	var ps = BFS(map, snakePS, foodPS);
 	ps[0] = ps[0] - snakePS[0];
 	ps[1] = ps[1] - snakePS[1];
