@@ -145,7 +145,7 @@ document.onkeydown = function(event) {
 	if(e && e.keyCode == 39) snake.MoveSnake(snake.GameMap, "right");
 	if(e && e.keyCode == 40) snake.MoveSnake(snake.GameMap, "down");
 }
-setInterval("selfMove()", 50);
+setInterval("selfMove()", 0);
 function selfMove() {
 	snake.MoveSnake(snake.GameMap, NextPath(snake.GameMap, snake.Body[0], snake.Food));
 }
